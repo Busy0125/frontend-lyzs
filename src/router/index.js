@@ -14,6 +14,8 @@ import LogInfo from '@/view/systemPage/LogInfo.vue'
 import AddPatent from '@/view/demo/AddPatent.vue'
 import PatentInfo from '@/view/demo/PatentInfo.vue'
 import FileUpload from '@/view/demo/FileUpload.vue'
+import AddData from "../view/machineLearning/AddData";
+import DataRetrieve from "../view/Retrieve/DataRetrieve";
 
 Vue.use(Router)
 
@@ -92,6 +94,20 @@ export default new Router({
           name: '文件上传',
           component: FileUpload,
         },
+        // 父菜单：机器学习
+        // 子菜单：数据上传及展示
+        {
+          path: '/addData',
+          name: '数据上传及展示',
+          component: AddData,
+        },
+        // 父菜单：首页
+        // 子菜单：数据检索
+        {
+          path: '/dataRetrieve',
+          name: '数据检索',
+          component: DataRetrieve,
+        }
       ]
     }
   ]
